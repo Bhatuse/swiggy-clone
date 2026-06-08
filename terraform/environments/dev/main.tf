@@ -12,3 +12,10 @@ module "ecs" {
   tg_arn       = module.alb.blue_tg_arn
   role_arn     = module.iam.ecs_execution_role_arn
 }
+
+module "alb" {
+  source = "../../modules/alb"
+
+  alb_sg_id        = module.security_groups.alb_sg_id
+  public_subnet_ids = module.networking.public_subnet_ids
+}
