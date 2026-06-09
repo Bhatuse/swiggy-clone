@@ -1,0 +1,11 @@
+project_name         = "swiggy"
+environment          = "dev"
+vpc_cidr             = "10.0.0.0/16"
+public_subnet_cidrs  = ["10.0.10.0/24", "10.0.11.0/24"]
+private_subnet_cidrs = ["10.0.1.0/24", "10.0.2.0/24"]
+availability_zones   = ["ap-south-1a", "ap-south-1b"]
+container_image_uri  = "your-registry/swiggy-app:latest"
+ami_id               = "ami-xxxxxxxxx"
+instance_type        = "t3.medium"
+key_name             = "your-ec2-key"
+s3_bucket_name       = "swiggy-alb-logs-dev"

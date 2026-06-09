@@ -17,3 +17,19 @@ output "alb_zone_id" {
   description = "Application Load Balancer Hosted Zone ID"
   value       = aws_lb.swiggy_alb.zone_id
 }
+
+output "blue_target_group_arn" {
+  value = aws_lb_target_group.blue.arn
+}
+
+output "green_target_group_arn" {
+  value = aws_lb_target_group.green.arn
+}
+
+output "prod_listener_arn" {
+  value = aws_lb_listener.prod.arn
+}
+
+output "test_listener_arn" {
+  value = aws_lb_listener.test.arn
+}
